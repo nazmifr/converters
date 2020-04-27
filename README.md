@@ -2,6 +2,8 @@
 
 To download the whole pack click on **Clone or download > Download ZIP**
 
+![how to clone or download zip](clone or download zip.png)
+
 You may also download individual HTML files and open them with your javascript capable browser (there are no external scripts or ressources sos No-Script should work fine)
 
 Any contribution, fork, improvement, suggestion is welcome! Let's create a pack of simple converters!

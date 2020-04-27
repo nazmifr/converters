@@ -1,10 +1,6 @@
 # Javascript open-source web converters
 
-To download the whole pack click on **Clone or download > Download ZIP**
-
-![how to clone or download zip](https://github.com/nazmifr/converters/raw/master/clone%20or%20download%20zip.png)
-
-You may also download individual HTML files and open them with your javascript capable browser (there are no external scripts or ressources sos No-Script should work fine)
+[How to download and use the converters](#how_to)
 
 Any contribution, fork, improvement, suggestion is welcome! Let's create a pack of simple converters!
 
@@ -16,3 +12,16 @@ Also they often rely on PHP, which is a great language, but again you're depende
 
 ![Can JS do maths_?](can_js_maths.png)
 
+#how_to
+
+To download the whole pack click on **Clone or download > Download ZIP**
+
+![how to clone or download zip](https://github.com/nazmifr/converters/raw/master/clone%20or%20download%20zip.png)
+
+You may also download individual HTML files and open them with your javascript capable browser (there are no external scripts or ressources sos No-Script should work fine)
+
+If you downloaded the whole pack, unzip it then double click the individual html files or right click > open with firefox/chrome/...
+
+The .html are self contained, you may mail them to a friend indeed or whatever ;)
+
+Enjoy!

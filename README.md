@@ -1,4 +1,9 @@
 # converters
+
+To download the whole pack click on **Clone or download > Download ZIP**
+
+You may also download individual HTML files and open them with your javascript capable browser (there are no external scripts or ressources sos No-Script should work fine)
+
 Any contribution, fork, improvement, suggestion is welcome! Let's create a pack of simple converters!
 
 Online converters are great, yet sometime they lack ergonomy and when you don't have an internet connection, you're screwed.. also they're webpages with a backend so you can't reliably back-them-up so when the site closes, well that's work that has been done in vain...

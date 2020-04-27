@@ -22,8 +22,9 @@ document.getElementById('nf').value = nf;
 document.getElementById('uf').value = uf;
 document.getElementById('mf').value = mf;
 document.getElementById('f').value = f;
+}
 
-if (capacite>100 && capacite<991 && capacitend == 1){
+if (capacite>100 && capacitend === 0 && capacite<991){
 
 console.log("sweden dd");
 
@@ -41,10 +42,10 @@ document.getElementById('f').value = f;
 	
 }
 
-if (capacitend = 1 && capacite >= 101 && capacite < 991){
+if (capacitend === 1 && capacite >= 101 && capacite <= 991){
 	
 console.log("sweden yes");
-capacite = capacite.toString().replace(/\d{1}$/, '') * 10;
+capacite = capacite.toString().replace(/\d{1}$/, '') * Math.pow(10, 1);
 
 var nf = capacite / Math.pow(10, 3);
 var uf = capacite / Math.pow(10, 6);
@@ -59,5 +60,147 @@ document.getElementById('f').value = f;
 	
 }
 
+if (capacitend == 2 && capacite >= 102 && capacite <= 992){
+	
+console.log("sweden yes yes");
+capacite = capacite.toString().replace(/\d{1}$/, '') * Math.pow(10, 2);
 
-}}
+var nf = capacite / Math.pow(10, 3);
+var uf = capacite / Math.pow(10, 6);
+var mf = capacite / Math.pow(10, 9);
+var f = capacite / Math.pow(10, 12);
+
+document.getElementById('pf').value = capacite;
+document.getElementById('nf').value = nf;
+document.getElementById('uf').value = uf;
+document.getElementById('mf').value = mf;
+document.getElementById('f').value = f;
+	
+}
+
+if (capacitend == 3 && capacite >= 103 && capacite <= 993){
+	
+console.log("sweden yes yes");
+capacite = capacite.toString().replace(/\d{1}$/, '') * Math.pow(10, 3);
+
+var nf = capacite / Math.pow(10, 3);
+var uf = capacite / Math.pow(10, 6);
+var mf = capacite / Math.pow(10, 9);
+var f = capacite / Math.pow(10, 12);
+
+document.getElementById('pf').value = capacite;
+document.getElementById('nf').value = nf;
+document.getElementById('uf').value = uf;
+document.getElementById('mf').value = mf;
+document.getElementById('f').value = f;
+	
+}
+
+if (capacitend == 4 && capacite >= 104 && capacite <= 994){
+	
+console.log("sweden yes yes");
+capacite = capacite.toString().replace(/\d{1}$/, '') * Math.pow(10, 4);
+
+var nf = capacite / Math.pow(10, 3);
+var uf = capacite / Math.pow(10, 6);
+var mf = capacite / Math.pow(10, 9);
+var f = capacite / Math.pow(10, 12);
+
+document.getElementById('pf').value = capacite;
+document.getElementById('nf').value = nf;
+document.getElementById('uf').value = uf;
+document.getElementById('mf').value = mf;
+document.getElementById('f').value = f;
+	
+}
+if (capacitend == 5 && capacite >= 105 && capacite <= 995){
+	
+console.log("sweden yes yes");
+capacite = capacite.toString().replace(/\d{1}$/, '') * Math.pow(10, 5);
+
+var nf = capacite / Math.pow(10, 3);
+var uf = capacite / Math.pow(10, 6);
+var mf = capacite / Math.pow(10, 9);
+var f = capacite / Math.pow(10, 12);
+
+document.getElementById('pf').value = capacite;
+document.getElementById('nf').value = nf;
+document.getElementById('uf').value = uf;
+document.getElementById('mf').value = mf;
+document.getElementById('f').value = f;
+	
+}
+
+if (capacitend == 6 && capacite >= 106 && capacite <= 996){
+	
+console.log("sweden yes yes");
+capacite = capacite.toString().replace(/\d{1}$/, '') * Math.pow(10, 6);
+
+var nf = capacite / Math.pow(10, 3);
+var uf = capacite / Math.pow(10, 6);
+var mf = capacite / Math.pow(10, 9);
+var f = capacite / Math.pow(10, 12);
+
+document.getElementById('pf').value = capacite;
+document.getElementById('nf').value = nf;
+document.getElementById('uf').value = uf;
+document.getElementById('mf').value = mf;
+document.getElementById('f').value = f;
+	
+}
+
+if (capacitend == 7 && capacite >= 107 && capacite <= 997){
+	
+console.log("sweden yes yes");
+capacite = capacite.toString().replace(/\d{1}$/, '') * Math.pow(10, 7);
+
+var nf = capacite / Math.pow(10, 3);
+var uf = capacite / Math.pow(10, 6);
+var mf = capacite / Math.pow(10, 9);
+var f = capacite / Math.pow(10, 12);
+
+document.getElementById('pf').value = capacite;
+document.getElementById('nf').value = nf;
+document.getElementById('uf').value = uf;
+document.getElementById('mf').value = mf;
+document.getElementById('f').value = f;
+	
+}
+
+if (capacitend == 8 && capacite >= 108 && capacite <= 998){
+	
+console.log("sweden yes yes");
+capacite = capacite.toString().replace(/\d{1}$/, '') * Math.pow(10, 8);
+
+var nf = capacite / Math.pow(10, 3);
+var uf = capacite / Math.pow(10, 6);
+var mf = capacite / Math.pow(10, 9);
+var f = capacite / Math.pow(10, 12);
+
+document.getElementById('pf').value = capacite;
+document.getElementById('nf').value = nf;
+document.getElementById('uf').value = uf;
+document.getElementById('mf').value = mf;
+document.getElementById('f').value = f;
+	
+}
+
+if (capacitend == 9 && capacite >= 109 && capacite <= 999){
+	
+console.log("sweden yes yes");
+capacite = capacite.toString().replace(/\d{1}$/, '') * Math.pow(10, 9);
+
+var nf = capacite / Math.pow(10, 3);
+var uf = capacite / Math.pow(10, 6);
+var mf = capacite / Math.pow(10, 9);
+var f = capacite / Math.pow(10, 12);
+
+document.getElementById('pf').value = capacite;
+document.getElementById('nf').value = nf;
+document.getElementById('uf').value = uf;
+document.getElementById('mf').value = mf;
+document.getElementById('f').value = f;
+	
+}
+console.log(capacite);
+}

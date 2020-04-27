@@ -2,7 +2,7 @@
 
 To download the whole pack click on **Clone or download > Download ZIP**
 
-![how to clone or download zip](clone or download zip.png)
+![how to clone or download zip](https://github.com/nazmifr/converters/raw/master/clone%20or%20download%20zip.png)
 
 You may also download individual HTML files and open them with your javascript capable browser (there are no external scripts or ressources sos No-Script should work fine)
 

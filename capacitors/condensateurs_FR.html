@@ -1,3 +1,162 @@
+<head>
+
+<meta charset="UTF-8">
+
+ <style>
+	#capa{
+	display:inline;
+		background-image:url('http://kiloohm.info/capacitor.png');
+		background-repeat:no-repeat;
+		height:60px;
+		padding-top:27px;
+		font-size:25px;
+		font-weight:bold;
+		text-align:center;
+		width:70px;
+	}
+		#capad{
+		display:inline;
+		background-image:url('https://wtf.roflcopter.fr/pics/EiX2QYZv/Bc7F6Rvz.png');
+		background-repeat:no-repeat;
+		height:60px;
+		padding-top:27px;
+		font-size:25px;
+		font-weight:bold;
+		text-align:center;
+		width:70px;
+	}
+    
+	
+	.no_ul{
+		text-decoration:none;
+		color: #993300;
+		font-weight:bold;
+    }
+
+	.no_ul_sel {
+		text-decoration: none;
+		border: 2px solid black;
+		border-radius: 5px;
+		padding-right: 1px;
+		padding-left: 1px;
+		text-decoration:none;
+		color: #993300;
+		font-weight:bold;
+	}
+
+	body {
+		font-family: Arial, sans-serif;
+		font-size: 14px;
+		color: #000000;
+	}
+</style>
+
+</head>
+
+<body>
+
+
+<h1>Convertisseur de condensateur JavaScript</h1>
+Appuyez sur CTRL+S ou cliquez <a href="https://raw.githubusercontent.com/nazmifr/converters/master/capacitors/condensateurs_FR.html">ici</a> (clic droit > enregistrer le lien sous) pour télécharger une version fonctionelle hors-ligne de cette page.<br><br>
+Cette page ne vous piste pas, ne contient pas de cookies elle nécessite juste le code javascript contenu dans la page HTML.<br><br>
+Le code de la page est open-source par design et aucune restriction en dehors de l'attribution existe dessus. Vous pouvez en faire ce que vous voulez même un usage commercial tant que l'attribution en bas reste.<br><br>
+Merci aux développeurs talentueux de faire des forks mieux conçus :p<br><br>
+
+Ce convertisseur peut donner le code à trois chiffres des condensateurs de 1pF à 990uF (généralement on rencontre des condensateurs céramique de 1pF à 10uF, rarement plus ou moins)
+
+<h2>Entrer une valeur suivie de pF nF uF mF (l'unité par défaut est le nF)</h2>
+<input type="text" id="inputt">
+
+<input type="text" id="pf"></input>pF
+<input type="text" id="nf"></input>nF
+<input type="text" id="uf"></input>uF
+<input type="text" id="mf"></input>mF
+<input type="text" id="f"></input>F<br><br>
+
+<div style="margin:auto auto;width:100%;display:flex;"><p contenteditable="true" onkeypress="upval();" id="capa">012</p></div>
+
+
+
+
+
+<!--
+<h2>Cliquer sur les nombres imprimés sur votre condensateur pour afficher la valeur</h2>
+<table border="1">
+
+<tbody><tr><td class="band-desc">1st digit</td><td class="band-desc">2nd digit</td><td class="band-desc">3rd digit<br>multiplier</td></tr><tr><td class="option-list">
+&nbsp;<br><a title="1" class="no_ul" href="/3-digit-capacitor/197">&nbsp;&nbsp;1&nbsp;&nbsp;</a><br>
+<a title="2" class="no_ul" href="/3-digit-capacitor/297">&nbsp;&nbsp;2&nbsp;&nbsp;</a><br>
+<a title="3" class="no_ul" href="/3-digit-capacitor/397">&nbsp;&nbsp;3&nbsp;&nbsp;</a><br>
+<a title="4" class="no_ul" href="/3-digit-capacitor/497">&nbsp;&nbsp;4&nbsp;&nbsp;</a><br>
+<a title="5" class="no_ul" href="/3-digit-capacitor/597">&nbsp;&nbsp;5&nbsp;&nbsp;</a><br>
+<a title="6" class="no_ul" href="/3-digit-capacitor/697">&nbsp;&nbsp;6&nbsp;&nbsp;</a><br>
+<a title="7" class="no_ul" href="/3-digit-capacitor/797">&nbsp;&nbsp;7&nbsp;&nbsp;</a><br>
+<a title="8" class="no_ul" href="/3-digit-capacitor/897">&nbsp;&nbsp;8&nbsp;&nbsp;</a><br>
+<a title="9" class="no_ul_sel" href="/3-digit-capacitor/997">&nbsp;&nbsp;9&nbsp;&nbsp;</a><br>
+</td><td class="option-list">
+<a title="0" class="no_ul" href="/3-digit-capacitor/907">&nbsp;&nbsp;0&nbsp;&nbsp;</a><br>
+<a title="1" class="no_ul" href="/3-digit-capacitor/917">&nbsp;&nbsp;1&nbsp;&nbsp;</a><br>
+<a title="2" class="no_ul" href="/3-digit-capacitor/927">&nbsp;&nbsp;2&nbsp;&nbsp;</a><br>
+<a title="3" class="no_ul" href="/3-digit-capacitor/937">&nbsp;&nbsp;3&nbsp;&nbsp;</a><br>
+<a title="4" class="no_ul" href="/3-digit-capacitor/947">&nbsp;&nbsp;4&nbsp;&nbsp;</a><br>
+<a title="5" class="no_ul" href="/3-digit-capacitor/957">&nbsp;&nbsp;5&nbsp;&nbsp;</a><br>
+<a title="6" class="no_ul" href="/3-digit-capacitor/967">&nbsp;&nbsp;6&nbsp;&nbsp;</a><br>
+<a title="7" class="no_ul" href="/3-digit-capacitor/977">&nbsp;&nbsp;7&nbsp;&nbsp;</a><br>
+<a title="8" class="no_ul" href="/3-digit-capacitor/987">&nbsp;&nbsp;8&nbsp;&nbsp;</a><br>
+<a title="9" class="no_ul_sel" href="/3-digit-capacitor/997">&nbsp;&nbsp;9&nbsp;&nbsp;</a><br>
+</td><td class="option-list">
+<a title="0 / none (x1 pF)" class="no_ul" href="/3-digit-capacitor/990">&nbsp;&nbsp;0 / vide&nbsp;&nbsp;</a><br>
+<a title="1 (x10 pF)" class="no_ul" href="/3-digit-capacitor/991">&nbsp;&nbsp;1&nbsp;&nbsp;</a><br>
+<a title="2 (x100 pF)" class="no_ul" href="/3-digit-capacitor/992">&nbsp;&nbsp;2&nbsp;&nbsp;</a><br>
+<a title="3 (x1000 pF)" class="no_ul" href="/3-digit-capacitor/993">&nbsp;&nbsp;3&nbsp;&nbsp;</a><br>
+<a title="4 (x10000 pF)" class="no_ul" href="/3-digit-capacitor/994">&nbsp;&nbsp;4&nbsp;&nbsp;</a><br>
+<a title="5 (x100000 pF)" class="no_ul" href="/3-digit-capacitor/995">&nbsp;&nbsp;5&nbsp;&nbsp;</a><br>
+<a title="6 (x1000000 pF)" class="no_ul" href="/3-digit-capacitor/996">&nbsp;&nbsp;6&nbsp;&nbsp;</a><br>
+<a title="7 (x10000000 pF)" class="no_ul_sel" href="/3-digit-capacitor/997">&nbsp;&nbsp;7&nbsp;&nbsp;</a><br>
+<a title="8 (x0.01 pF)" class="no_ul" href="/3-digit-capacitor/998">&nbsp;&nbsp;8&nbsp;&nbsp;</a><br>
+<a title="9 (x0.1 pF)" class="no_ul" href="/3-digit-capacitor/999">&nbsp;&nbsp;9&nbsp;&nbsp;</a><br>
+</td>
+</tr></tbody></table>
+-->
+
+<h2>Les tables de décades</h2>
+
+Le standard international en terme de composants donne des valeurs références organisées en décades, EXX
+plus la valeur XX est importante, plus on a de décimations et donc de références, voici les principales listes de valeurs à posséder:
+
+N'oubliez pas de combiner des condensateurs en série et en parallèle pour disposer d'encore plus de valeurs !!!
+
+Voir mon convertisseur ici:
+
+Vous recherchez un condensateur en particulier ? Consultez mes stocks:
+
+<h2>Il vous manque une valeur de condensateur</h2>
+
+<h2>N'oubliez pas le testeur ECR</h2>
+
+Il vous permet de mesurer si un condensateur a bien la capacité imprimée dessus et permet d'identifier les condensateurs au marquage effacé.
+
+<br>
+<br>
+Cliquez ici pour acheter votre testeur ECR et me soutenir ou consulter les schémas libres pour fabriquer le votre:<br>
+<a href="">Acheter</a><br>
+<a href="">Donner de l'argent, du temps ou des ressources</a><br>
+<a href="">Plans de l'ECR mètre</a>
+
+<h2>Inspiration</h2>
+
+Ce convertisseur est basé sur ceux de
+<a href="http://kiloohm.info/3-digit-capacitor/100">KiloOhm</a>
+et sur
+<a href="https://remotemonitoringsystems.ca/uF-nF-pF.php">EtherTek</a>
+et a été inspiré par leur manque d'ergonomie et la galère que j'ai à ne pas savoir compter en 10<sup>n</sup> ce qui m'm'oblige à faire appel à leurs services depuis des années.<br>
+
+<br>
+
+Codé le 27 avril 2020 en JavaScript <img src="https://www.frenchy-ponies.fr/images/smilies/Smiley%20v2/8.gif"> par <a href="https://nazmi.fr">Nazmi</a> (https://nazmi.fr, github.com/nazmifr)
+
+
+<script>
 document.onkeydown = upval;
 document.onkeyup = upval;
 
@@ -10,7 +169,7 @@ console.log(capacite);
 console.log(capacitend);
 
 if (capacite<100){
-console.log("sweden pone");
+//console.log("sweden pone");
 
 var nf = capacite / Math.pow(10, 3);
 var uf = capacite / Math.pow(10, 6);
@@ -26,7 +185,7 @@ document.getElementById('f').value = f;
 
 if (capacite>100 && capacitend === 0 && capacite<991){
 
-console.log("sweden dd");
+//console.log("sweden dd");
 
 capacite = capacite / 10;
 var nf = capacite / Math.pow(10, 3);
@@ -44,7 +203,7 @@ document.getElementById('f').value = f;
 
 if (capacitend === 1 && capacite >= 101 && capacite <= 991){
 	
-console.log("sweden yes");
+//console.log("sweden yes");
 capacite = capacite.toString().replace(/\d{1}$/, '') * Math.pow(10, 1);
 
 var nf = capacite / Math.pow(10, 3);
@@ -62,7 +221,7 @@ document.getElementById('f').value = f;
 
 if (capacitend == 2 && capacite >= 102 && capacite <= 992){
 	
-console.log("sweden yes yes");
+//console.log("sweden yes yes");
 capacite = capacite.toString().replace(/\d{1}$/, '') * Math.pow(10, 2);
 
 var nf = capacite / Math.pow(10, 3);
@@ -80,7 +239,6 @@ document.getElementById('f').value = f;
 
 if (capacitend == 3 && capacite >= 103 && capacite <= 993){
 	
-console.log("sweden yes yes");
 capacite = capacite.toString().replace(/\d{1}$/, '') * Math.pow(10, 3);
 
 var nf = capacite / Math.pow(10, 3);
@@ -98,7 +256,6 @@ document.getElementById('f').value = f;
 
 if (capacitend == 4 && capacite >= 104 && capacite <= 994){
 	
-console.log("sweden yes yes");
 capacite = capacite.toString().replace(/\d{1}$/, '') * Math.pow(10, 4);
 
 var nf = capacite / Math.pow(10, 3);
@@ -115,7 +272,6 @@ document.getElementById('f').value = f;
 }
 if (capacitend == 5 && capacite >= 105 && capacite <= 995){
 	
-console.log("sweden yes yes");
 capacite = capacite.toString().replace(/\d{1}$/, '') * Math.pow(10, 5);
 
 var nf = capacite / Math.pow(10, 3);
@@ -133,7 +289,6 @@ document.getElementById('f').value = f;
 
 if (capacitend == 6 && capacite >= 106 && capacite <= 996){
 	
-console.log("sweden yes yes");
 capacite = capacite.toString().replace(/\d{1}$/, '') * Math.pow(10, 6);
 
 var nf = capacite / Math.pow(10, 3);
@@ -151,7 +306,6 @@ document.getElementById('f').value = f;
 
 if (capacitend == 7 && capacite >= 107 && capacite <= 997){
 	
-console.log("sweden yes yes");
 capacite = capacite.toString().replace(/\d{1}$/, '') * Math.pow(10, 7);
 
 var nf = capacite / Math.pow(10, 3);
@@ -169,7 +323,6 @@ document.getElementById('f').value = f;
 
 if (capacitend == 8 && capacite >= 108 && capacite <= 998){
 	
-console.log("sweden yes yes");
 capacite = capacite.toString().replace(/\d{1}$/, '') * Math.pow(10, 8);
 
 var nf = capacite / Math.pow(10, 3);
@@ -187,7 +340,6 @@ document.getElementById('f').value = f;
 
 if (capacitend == 9 && capacite >= 109 && capacite <= 999){
 	
-console.log("sweden yes yes");
 capacite = capacite.toString().replace(/\d{1}$/, '') * Math.pow(10, 9);
 
 var nf = capacite / Math.pow(10, 3);
@@ -204,3 +356,7 @@ document.getElementById('f').value = f;
 }
 console.log(capacite);
 }
+</script>
+
+<!--<script src="myscript.js"></script> -->
+

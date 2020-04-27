@@ -1,4 +1,4 @@
-# converters
+# Javascript open-source web converters
 
 To download the whole pack click on **Clone or download > Download ZIP**
 

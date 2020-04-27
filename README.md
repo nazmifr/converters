@@ -12,7 +12,7 @@ Also they often rely on PHP, which is a great language, but again you're depende
 
 ![Can JS do maths_?](can_js_maths.png)
 
-#how_to
+# how_to
 
 To download the whole pack click on **Clone or download > Download ZIP**
 

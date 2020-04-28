@@ -15,3 +15,6 @@ TODO:
 - ajouter le support des condensateurs de 0.1 à 0.99pF (double résultat), 
 - entrée manuelle de la valeur en uF, 
 - tableau décades et tableau digits desactivé actuellement
+
+
+http://scratchpad.io/minor-knee-9403
